@@ -89,8 +89,8 @@ require(data.table)</code></pre>
 <pre><code>## Loading required package: data.table</code></pre>
 <pre class="r"><code>require(ggplot2)</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>
-<pre class="r"><code>ELAByDistrictUrl &lt;- &quot;/Users/scottkarr/Downloads/District ELA Results 2013-2015.csv&quot;
-#ELAByDistrictUrl &lt;- &quot;https://raw.githubusercontent.com/scottkarr/hw4/master/School%20ELA%20Results%202013-2015.csv&quot;
+<pre class="r"><code>#ELAByDistrictUrl &lt;- &quot;/Users/scottkarr/Downloads/District ELA Results 2013-2015.csv&quot;
+ELAByDistrictUrl &lt;- &quot;https://raw.githubusercontent.com/scottkarr/hw4/master/District%20ELA%20Results%202013-2015.csv&quot;
 df_ELAByDistrict &lt;- read.table(file = ELAByDistrictUrl, header = TRUE, sep = &quot;,&quot;)
 dt_ELAByDistrict &lt;- data.table(df_ELAByDistrict)</code></pre>
 <div id="generate-descriptive-statistics" class="section level2">

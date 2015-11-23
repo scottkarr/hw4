@@ -23,7 +23,7 @@ require(data.table)
 require(ggplot2)
 
 #ELAByDistrictUrl <- "/Users/scottkarr/Downloads/District ELA Results 2013-2015.csv"
-ELAByDistrictUrl <- "https://raw.githubusercontent.com/scottkarr/hw4/master/School%20ELA%20Results%202013-2015.csv"
+ELAByDistrictUrl <- "https://raw.githubusercontent.com/scottkarr/hw4/master/District%20ELA%20Results%202013-2015.csv"
 df_ELAByDistrict <- read.table(file = ELAByDistrictUrl, header = TRUE, sep = ",")
 dt_ELAByDistrict <- data.table(df_ELAByDistrict)
 ```
