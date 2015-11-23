@@ -54,14 +54,14 @@ ans2 <- dt_ELAByDistrict[ Year == 2015 , .(District, Grade, Year, Lvl1Pct, Lvl2P
 ggplot(data = ans2) + geom_histogram(aes(x = PassPct))
 ```
 
-6. Histogram superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level1 percentages to passing percentages(level3 & level4).  Note the negative correlation since passing and level 1 scores are mutually exclusive, one would expect an inverse relationship between passing and level1 1 percentages.
+6. Scatterplot superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level1 percentages to passing percentages(level3 & level4).  Note the negative correlation since passing and level 1 scores are mutually exclusive, one would expect an inverse relationship between passing and level1 1 percentages.
 ```{r}
 g <- ggplot(ans2, aes(x = PassPct, y = Lvl1Pct)) + geom_point() + geom_boxplot()
 g <- g + geom_point(aes(color = Grade)) + facet_wrap(~Grade)
 g
 ```
 
-7 a. Histogram superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level2 percentages to passing percentages(level3 & level4).  Note the lack of correlation between passing and level2 percentages.  Passing and level2 scores are still mutually exclusive but their percentages aren't correlated.  Note however that for Grades that have higher percentages of level2 scores they have lower percentages of level3 scores.  (Compare to 7.)
+7 a. Scatterplot superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level2 percentages to passing percentages(level3 & level4).  Note the lack of correlation between passing and level2 percentages.  Passing and level2 scores are still mutually exclusive but their percentages aren't correlated.  Note however that for Grades that have higher percentages of level2 scores they have lower percentages of level3 scores.  (Compare to 7.)
 
 7 b. Grades 3 & 8 appear to have lower scores (higher percentage passing correlate to level2 than level3 scores) perhaps attributable to less experience with the newer tests.  The graphics help identify this pattern which can be explored further
 
@@ -71,7 +71,7 @@ g <- g + geom_point(aes(color = Grade)) + facet_wrap(~Grade)
 g
 ```
 
-8. Histogram superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level3 percentages to passing percentages(level3 & level4).  Note the positive correlation since passing and level 3 & 4 scores are colinear.
+8. Scatterplot superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level3 percentages to passing percentages(level3 & level4).  Note the positive correlation since passing and level 3 & 4 scores are colinear.
 Also note that lower level2 scores show up as higher level 3 scores.  
 
 ```{r}
@@ -80,14 +80,14 @@ g <- g + geom_point(aes(color = Grade)) + facet_wrap(~Grade)
 g
 ```
 
-9. Histogram superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level4 percentages to passing percentages(level3 & level4).  Note the positive correlation between passing and level4 percentages.
+9. Scatterplot superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level4 percentages to passing percentages(level3 & level4).  Note the positive correlation between passing and level4 percentages.
 ```{r}
 g <- ggplot(ans2, aes(x = PassPct, y = Lvl4Pct)) + geom_point() + geom_boxplot()
 g <- g + geom_point(aes(color = Grade)) + facet_wrap(~Grade)
 g
 ```
 
-10. Histogram superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level4 percentages to passing percentages(level3 & level4).  Note the positive correlation between passing and level4 percentages.
+10. Scatterplot superimposing scatterplot and box diagram, grouped by Grade.  Data compares 2015 ELA level4 percentages to passing percentages(level3 & level4).  Note the positive correlation between passing and level4 percentages.
 
 ```{r}
 g <- ggplot(ans2, aes(x = PassPct, y = Lvl4Pct)) + geom_point() + geom_boxplot()
